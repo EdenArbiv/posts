@@ -1,0 +1,21 @@
+<div class="form">
+    <form [formGroup]="form">
+    <h2>Add New Post:</h2>
+    <mat-form-field appearance="fill">
+        <mat-label>Enter your name</mat-label>
+        <input matInput formControlName="name" >
+    </mat-form-field>
+    <br>
+    <mat-form-field appearance="fill">
+        <mat-label>Enter your post</mat-label>
+        <textarea matInput formControlName="title" ></textarea>
+    </mat-form-field>
+    <br>
+    <mat-form-field appearance="fill">
+        <mat-label>Enter image URL</mat-label>
+        <input matInput formControlName="image" >
+    </mat-form-field>
+    <br><br>
+    <button (click)="addPost(form.value)" mat-raised-button>Add Post</button>
+    </form>
+</div>

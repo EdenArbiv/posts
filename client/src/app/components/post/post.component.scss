@@ -1,0 +1,53 @@
+.card{
+    width: 550px;
+    text-align: center;
+    margin: 0 25%;
+    height: 420px;
+    margin-top: 5%;
+    border: 1px solid silver;
+}
+
+.card >img{
+    width: 80%;
+    height: 70%;
+    
+}
+
+.comment{
+    width: 550px;
+    margin: 0 25%;
+    height: 70px;
+    border: 1px solid silver;
+}
+
+.name{
+    width: 140px;
+    margin: 1%;
+}
+
+.example-full-width{
+    width: 255px;
+}
+
+mat-form-field{
+    width: 400px;
+}
+
+.add{
+    margin: 2%;
+    width: 120px;
+
+}
+.comments{
+    width: 550px;
+    margin: 0 25%;
+    height: 30px;
+    border: 1px solid silver;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.comments >*{
+    margin: 2%;
+}

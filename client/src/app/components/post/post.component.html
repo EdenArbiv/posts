@@ -1,0 +1,35 @@
+<div>
+    <mat-card class="card" >
+        <mat-card-title>{{_data.postData[0].name}}</mat-card-title>
+        <mat-card-subtitle>{{_data.postData[0].title}}</mat-card-subtitle>
+        <img src={{_data.postData[0].image}} mat-card-lg-image>
+        <br><br>
+        <button class="btn1" (click)="like(_data.postData[0].id)"  mat-icon-button >
+            <mat-icon matBadge={{_data.postData[0].likes}} matBadgeColor="accent">favorite</mat-icon>
+        </button>
+        <button class="btn2" mat-icon-button>
+            <mat-icon> insert_comment</mat-icon>
+        </button>
+        <button (click)="deletePost(_data.postData[0].id)" class="btn2" mat-icon-button >
+            <mat-icon>delete_forever</mat-icon>
+        </button>
+    </mat-card>
+    <mat-card class="comment">
+    <form class="example-form" [formGroup]="form">
+        <mat-form-field  class="name" appearance="fill">
+            <mat-label>Enter your name</mat-label>
+            <input formControlName="name" matInput formControlName="name" >
+        </mat-form-field>
+        <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Leave a comment</mat-label>
+            <textarea formControlName="body" matInput placeholder="Ex. It makes me feel..."></textarea>
+        </mat-form-field>
+        <button class="add" (click)="addComment(_data.postData[0].id, form.value)"  mat-stroked-button>Add Comment</button>
+        </form> 
+    </mat-card>
+    <mat-card class="comments" *ngFor="let comment of _data.commentsArr">
+        <mat-card-title>{{comment.name}}</mat-card-title>
+        <mat-card-content>{{comment.body}}</mat-card-content>
+    </mat-card>
+ 
+</div>

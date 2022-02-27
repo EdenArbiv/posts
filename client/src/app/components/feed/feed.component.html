@@ -1,0 +1,6 @@
+<div class="feed">
+    <button (click)="addPost()" class="add" mat-fab aria-label="Example icon button with a heart icon">
+        <mat-icon color="black">queue</mat-icon>
+    </button>
+    <app-postcard *ngFor="let post of _data.postsArr" [post]="post"></app-postcard >
+</div>

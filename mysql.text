@@ -1,0 +1,29 @@
+-- create database insta;
+-- use insta;
+
+-- create table posts(
+-- id int auto_increment,
+-- name varchar(50),
+-- title text(800),
+-- image text(800),
+-- likes int default 0,
+-- comments int default 0,
+-- primary key(id)
+-- );
+
+-- create table comments(
+-- id int auto_increment,
+-- post_id int ,
+-- name varchar(50),
+-- body text(800),
+-- primary key(id),
+-- foreign key(post_id) references posts(id)
+-- );
+
+-- insert into posts(name, title, image, likes, comments)
+-- values("dana", "hi everybody, i wanted to share with you the view from yesterday's trip!", "https://www.picshare.co.il/m_pictures/img140403.jpg", 2 ,0),
+-- ("yoram", "my weekend...", "https://www.davar1.co.il/wp-content/uploads/2017/05/100517_dog-1026x684.jpg", 5, 1);
+
+
+-- insert into comments(post_id, name, body)
+-- values(2, "alin", "yes, mine too!");

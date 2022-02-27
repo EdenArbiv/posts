@@ -1,0 +1,15 @@
+<mat-card class="card" (click)="_data.getpostData(post.id)">
+    <mat-card-title>{{post.name}}</mat-card-title>
+    <mat-card-subtitle>{{post.title}}</mat-card-subtitle>
+    <img src={{post.image}} mat-card-lg-image>
+    <br><br>
+</mat-card>
+<mat-card class="options">
+    <button class="btn1" mat-icon-button aria-label="Example icon button with a heart icon">
+        <mat-icon  (click)="like(post.id)" matBadge={{post.likes}} matBadgeColor="accent">favorite</mat-icon>
+    </button>
+    <button class="btn2" (click)="_data.getpostData(post.id)" mat-icon-button aria-label="Example icon button with a heart icon">
+        <mat-icon> insert_comment</mat-icon>
+    </button>
+    
+</mat-card>

@@ -1,0 +1,19 @@
+.feed{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+ 
+}
+
+.add{
+
+    background-color: rgb(103, 212, 231);
+    color: black;
+    position: fixed;
+    top:15%;
+    left:5%;
+    z-index: 999;
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+}
